@@ -5,7 +5,6 @@
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-api"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-api-desktop"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-gson"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-red"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-red-desktop"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/rana-io"/>

@@ -3,10 +3,10 @@ package com.jfixby.r3.assets.packer.tinto;
 
 import java.io.IOException;
 
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.file.FileSystem;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.util.path.AbsolutePath;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class PackRedAtlasAsset {
 

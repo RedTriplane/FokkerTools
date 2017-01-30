@@ -15,12 +15,12 @@ import com.jfixby.scarabei.api.assets.Names;
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.List;
 import com.jfixby.scarabei.api.collections.Set;
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.FilesList;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.json.Json;
-import com.jfixby.scarabei.gson.GoogleGson;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
+import com.jfixby.scarabei.red.json.GoogleJson;
 
 public class PackTintoTexts {
 
@@ -30,7 +30,7 @@ public class PackTintoTexts {
 
 	public static final void main (final String[] arg) throws IOException {
 		ScarabeiDesktop.deploy();
-		Json.installComponent(new GoogleGson());
+		Json.installComponent(new GoogleJson());
 
 		final FilesList langFiles = LocalFileSystem.ApplicationHome().child("input").child("ru").listDirectChildren();
 

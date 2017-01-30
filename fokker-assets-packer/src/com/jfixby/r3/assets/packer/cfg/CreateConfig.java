@@ -3,20 +3,20 @@ package com.jfixby.r3.assets.packer.cfg;
 
 import java.io.IOException;
 
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.json.JsonString;
 import com.jfixby.scarabei.api.log.L;
-import com.jfixby.scarabei.gson.GoogleGson;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
+import com.jfixby.scarabei.red.json.GoogleJson;
 
 public class CreateConfig {
 
 	public static void main (final String[] args) throws IOException {
 
 		ScarabeiDesktop.deploy();
-		Json.installComponent(new GoogleGson());
+		Json.installComponent(new GoogleJson());
 		final R3AssetsPackerConfig config = new R3AssetsPackerConfig();
 
 		config.outputBankFolderPath = "D:/[DATA]/[RED-ASSETS]/Art-Private/red-triplane-assets/assets/com.red-triplane.assets.r3.local";

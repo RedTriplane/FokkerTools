@@ -5,11 +5,11 @@ import java.io.IOException;
 
 import com.jfixby.r3.rana.api.pkg.io.PackageDescriptor;
 import com.jfixby.scarabei.api.collections.Collections;
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.FilesList;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.log.L;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 import com.jfixby.tools.gdx.texturepacker.api.indexed.IndexedCompressor;
 import com.jfixby.tools.texturepacker.red.indexed.RedIndexedCompressor;
 

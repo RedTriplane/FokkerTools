@@ -10,7 +10,6 @@ import com.jfixby.r3.fokker.assets.api.shader.io.ShaderInfo;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShadersContainer;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.assets.Names;
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.FilesList;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
@@ -18,14 +17,15 @@ import com.jfixby.scarabei.api.io.IO;
 import com.jfixby.scarabei.api.java.ByteArray;
 import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.log.L;
-import com.jfixby.scarabei.gson.GoogleGson;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
+import com.jfixby.scarabei.red.json.GoogleJson;
 
 public class CreateFokkerShaders {
 
 	public static void main (final String[] args) throws IOException {
 
 		ScarabeiDesktop.deploy();
-		Json.installComponent(new GoogleGson());
+		Json.installComponent(new GoogleJson());
 
 		final File templates = LocalFileSystem.ApplicationHome().child("shaders").child("templates");
 		final File photoshop_template = templates.child(FOKKER_SYSTEM_ASSETS.SHADERS.toString());

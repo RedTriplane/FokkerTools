@@ -14,7 +14,6 @@ import com.jfixby.scarabei.api.collections.List;
 import com.jfixby.scarabei.api.debug.Debug;
 import com.jfixby.scarabei.api.debug.DebugTimer;
 import com.jfixby.scarabei.api.desktop.ImageAWT;
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.FileFilter;
 import com.jfixby.scarabei.api.file.FilesList;
@@ -23,8 +22,9 @@ import com.jfixby.scarabei.api.java.gc.GCFisher;
 import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.api.sys.Sys;
-import com.jfixby.scarabei.gson.GoogleGson;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.red.desktop.image.RedImageAWT;
+import com.jfixby.scarabei.red.json.GoogleJson;
 import com.jfixby.texture.slicer.api.TextureSlicer;
 import com.jfixby.texture.slicer.red.RedTextureSlicer;
 import com.jfixby.tool.psd2scene2d.CompressionInfo;
@@ -49,7 +49,7 @@ public class RepackCamTest {// -Xms512m -Xmx4g
 // PNGQuant.installComponent(new PNGQuantJavaWrapper("D:\\[DEV]\\[GIT]\\pngquant\\PNGQuant\\pngquant.exe"));
 
 		PSDUnpacker.installComponent(new RedPSDUnpacker());
-		Json.installComponent(new GoogleGson());
+		Json.installComponent(new GoogleJson());
 		TexturePacker.installComponent(new GdxTexturePacker());
 		TextureSlicer.installComponent(new RedTextureSlicer());
 // TextureBleed.installComponent(new MaskTextureBleeder());
