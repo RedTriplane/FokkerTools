@@ -1,9 +1,8 @@
 
-package com.jfixby.r3.assets.packer;
+package com.jfixby.r3.assets.packer.tinto;
 
 import java.io.IOException;
 
-import com.jfixby.r3.assets.packer.tinto.TintoAssetsConfig;
 import com.jfixby.r3.fokker.FOKKER_SYSTEM_ASSETS;
 import com.jfixby.r3.rana.api.pkg.io.PackageDescriptor;
 import com.jfixby.rana.api.pkg.StandardPackageFormats;
@@ -17,14 +16,17 @@ import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.api.sys.Sys;
 
-public class PackSystemFont {
+public class PackSystemLogo {
 
 	public static void main (final String[] args) throws IOException {
 
 		ScarabeiDesktop.deploy();
 		Json.installComponent(new GdxJson());
 
-		packSystemAsset(FOKKER_SYSTEM_ASSETS.GENERIC_FONT);
+		packSystemAsset(FOKKER_SYSTEM_ASSETS.RASTER_IS_MISING);
+		packSystemAsset(FOKKER_SYSTEM_ASSETS.BLACK);
+		packSystemAsset(FOKKER_SYSTEM_ASSETS.DEBUG_BLACK);
+		packSystemAsset(FOKKER_SYSTEM_ASSETS.LOGO);
 
 	}
 
@@ -33,11 +35,11 @@ public class PackSystemFont {
 		final File bank = home.child("bank-r3");
 
 		final PackageDescriptor descriptor = new PackageDescriptor();
-		descriptor.format = StandardPackageFormats.libGDX.TTFFont;
+		descriptor.format = StandardPackageFormats.libGDX.Texture;
 		descriptor.timestamp = "" + Sys.SystemTime().currentTimeMillis();
 		descriptor.version = "1.0";
 		descriptor.packed_assets.add(id.toString());
-		descriptor.root_file_name = "GenericFont.otf";
+		descriptor.root_file_name = id + ".png";
 
 		final String debug_info = Json.serializeToString(descriptor).toString();
 		L.d(debug_info);

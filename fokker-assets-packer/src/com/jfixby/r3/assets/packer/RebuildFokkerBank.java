@@ -1,5 +1,5 @@
 
-package com.jfixby.r3.assets.packer.go;
+package com.jfixby.r3.assets.packer;
 
 import java.io.IOException;
 
@@ -31,9 +31,7 @@ public class RebuildFokkerBank {
 		ScarabeiDesktop.deploy();
 		Json.installComponent(new GoogleGson());
 
-		final String outputAssetsFolderPathString = "";
-		final File outputFolder = LocalFileSystem.ApplicationHome().child("output");
-		outputFolder.makeFolder();
+		final File outputFolder = LocalFileSystem.newFile(FokkerAssetsConfig.FOKKER_LOCAL_ASSETS_HOME);
 
 		final BankHeaderInfo bankHeader = new BankHeaderInfo();
 		bankHeader.bank_name = FOKKER_SYSTEM_ASSETS.LOCAL_BANK_NAME;

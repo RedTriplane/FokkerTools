@@ -1,5 +1,5 @@
 
-package com.jfixby.r3.assets.packer.shader;
+package com.jfixby.r3.assets.packer;
 
 import java.io.IOException;
 
@@ -20,7 +20,7 @@ import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.gson.GoogleGson;
 
-public class s1_CreateSystemShaders {
+public class CreateFokkerShaders {
 
 	public static void main (final String[] args) throws IOException {
 
@@ -33,7 +33,7 @@ public class s1_CreateSystemShaders {
 		final File shaders = LocalFileSystem.ApplicationHome().child("shaders");
 		final File output = shaders.child("prepared");
 		output.makeFolder();
-		output.clearFolder();
+// output.clearFolder();
 
 		final File pkg = output.child(FOKKER_SYSTEM_ASSETS.SHADERS.toString());
 		final File root_file = pkg.child(R3_SHADER_SETTINGS.ROOT_FILE_NAME);

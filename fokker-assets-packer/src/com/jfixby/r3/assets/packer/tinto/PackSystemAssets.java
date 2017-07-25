@@ -1,9 +1,8 @@
 
-package com.jfixby.r3.assets.packer;
+package com.jfixby.r3.assets.packer.tinto;
 
 import java.io.IOException;
 
-import com.jfixby.r3.assets.packer.tinto.TintoAssetsConfig;
 import com.jfixby.r3.fokker.FOKKER_SYSTEM_ASSETS;
 import com.jfixby.r3.rana.api.pkg.io.PackageDescriptor;
 import com.jfixby.rana.api.pkg.StandardPackageFormats;

@@ -1,5 +1,5 @@
 
-package com.jfixby.r3.assets.packer.shader.go;
+package com.jfixby.r3.assets.packer;
 
 import java.io.IOException;
 
