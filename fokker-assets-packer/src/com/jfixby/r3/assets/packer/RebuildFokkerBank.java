@@ -3,6 +3,7 @@ package com.jfixby.r3.assets.packer;
 
 import java.io.IOException;
 
+import com.jfixby.r3.assets.packer.font.SystemFontPacker;
 import com.jfixby.r3.assets.packer.raster.SystemRasterPacker;
 import com.jfixby.r3.fokker.FOKKER_SYSTEM_ASSETS;
 import com.jfixby.r3.fokker.assets.api.shader.io.R3_SHADER_SETTINGS;
@@ -48,6 +49,18 @@ public class RebuildFokkerBank {
 
 		packShaders(tankFolder);
 		packRaster(tankFolder);
+		packDefaultFont(tankFolder);
+
+	}
+
+	private static void packDefaultFont (final File tank) throws IOException {
+
+		final String fontName = FOKKER_SYSTEM_ASSETS.GENERIC_FONT.toString();
+		final File fontFolder = LocalFileSystem.ApplicationHome().child("fonts").child(fontName);
+		final List<String> steps = Names.newID(FOKKER_SYSTEM_ASSETS.GENERIC_FONT).steps();
+		steps.reverse();
+		final String fontFileName = Names.newID(steps).toString();
+		SystemFontPacker.packSystemFont(tank, fontFolder, fontFileName);
 
 	}
 
