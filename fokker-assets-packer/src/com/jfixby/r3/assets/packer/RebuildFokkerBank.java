@@ -35,7 +35,7 @@ public class RebuildFokkerBank {
 		final File outputFolder = LocalFileSystem.newFile(FokkerAssetsConfig.FOKKER_LOCAL_ASSETS_HOME);
 
 		final BankHeaderInfo bankHeader = new BankHeaderInfo();
-		bankHeader.bank_name = FOKKER_SYSTEM_ASSETS.LOCAL_BANK_NAME;
+		bankHeader.bank_name = FOKKER_SYSTEM_ASSETS.LOCAL_BANK_NAME.toString();
 
 		final File bankFolder = outputFolder.child(bankHeader.bank_name);
 		bankFolder.clearFolder();

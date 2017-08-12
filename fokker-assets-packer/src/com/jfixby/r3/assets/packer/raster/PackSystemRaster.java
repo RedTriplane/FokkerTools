@@ -21,7 +21,7 @@ public class PackSystemRaster {
 
 		final File outputBankFolder = LocalFileSystem.newFile(cfg.outputBankFolderPath);
 		final File tank = outputBankFolder.child(cfg.targetTank);
-		tank.listDirectChildren().print("tank");
+// tank.listDirectChildren().print("tank");
 
 		SystemRasterPacker.pack(tank);
 

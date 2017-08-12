@@ -9,7 +9,6 @@ import com.jfixby.r3.fokker.assets.api.shader.io.R3_SHADER_SETTINGS;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShaderInfo;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShadersContainer;
 import com.jfixby.scarabei.api.assets.ID;
-import com.jfixby.scarabei.api.assets.Names;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.io.IO;
@@ -54,7 +53,7 @@ public class CreateDefaultGdxShader {
 		ScarabeiDesktop.deploy();
 		Json.installComponent(new GoogleJson());
 		L.d("creating shader", FOKKER_SYSTEM_ASSETS.SHADER_GDX_DEFAULT);
-		final ID gdxDefault = Names.newID(FOKKER_SYSTEM_ASSETS.SHADER_GDX_DEFAULT);
+		final ID gdxDefault = (FOKKER_SYSTEM_ASSETS.SHADER_GDX_DEFAULT);
 		final File output_folder = LocalFileSystem.ApplicationHome().child("shaders").child("prepared")
 			.child("" + gdxDefault.parent());
 		output_folder.makeFolder();

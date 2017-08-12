@@ -22,7 +22,7 @@ public class PackDefaultShader {
 
 		final File outputBankFolder = LocalFileSystem.newFile(cfg.outputBankFolderPath);
 		final File tank = outputBankFolder.child(cfg.targetTank);
-		tank.listDirectChildren().print("tank");
+// tank.listDirectChildren().print("tank");
 
 		final String shaderPackageName = "com.badlogic.gdx.graphics.g2d.SpriteBatch";
 		final File packageFolder = tank.child(shaderPackageName);

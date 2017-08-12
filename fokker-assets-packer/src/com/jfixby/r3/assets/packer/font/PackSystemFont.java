@@ -6,7 +6,6 @@ import java.io.IOException;
 import com.jfixby.r3.assets.packer.cfg.ConfigLoader;
 import com.jfixby.r3.assets.packer.cfg.R3AssetsPackerConfig;
 import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
-import com.jfixby.scarabei.api.assets.Names;
 import com.jfixby.scarabei.api.collections.List;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
@@ -24,12 +23,12 @@ public class PackSystemFont {
 
 		final File outputBankFolder = LocalFileSystem.newFile(cfg.outputBankFolderPath);
 		final File tank = outputBankFolder.child(cfg.targetTank);
-		tank.listDirectChildren().print("tank");
+// tank.listDirectChildren().print("tank");
 		final String fontName = FOKKER_SYSTEM_ASSETS.GENERIC_FONT.toString();
 		final File fontFolder = LocalFileSystem.ApplicationHome().child("fonts").child(fontName);
-		final List<String> steps = Names.newID(FOKKER_SYSTEM_ASSETS.GENERIC_FONT).steps();
+		final List<String> steps = (FOKKER_SYSTEM_ASSETS.GENERIC_FONT).steps();
 		steps.reverse();
-		final String fontFileName = Names.newID(steps).toString();
+		final String fontFileName = (steps).toString();
 		SystemFontPacker.packSystemFont(tank, fontFolder, fontFileName);
 	}
 

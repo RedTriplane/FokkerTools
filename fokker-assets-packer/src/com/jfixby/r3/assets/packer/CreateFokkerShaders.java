@@ -9,7 +9,6 @@ import com.jfixby.r3.fokker.assets.api.shader.io.R3_SHADER_SETTINGS;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShaderInfo;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShadersContainer;
 import com.jfixby.scarabei.api.assets.ID;
-import com.jfixby.scarabei.api.assets.Names;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.FilesList;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
@@ -65,7 +64,7 @@ public class CreateFokkerShaders {
 		final String vert_template_string = input_vert_file.readToString();
 
 		final ShaderInfo info = new ShaderInfo();
-		final ID shader_id = Names.newID(FOKKER_SYSTEM_ASSETS.SHADERS).child(short_name);
+		final ID shader_id = (FOKKER_SYSTEM_ASSETS.SHADERS).child(short_name);
 		final File content = output.child(short_name);
 		content.makeFolder();
 		content.clearFolder();

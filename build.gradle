@@ -11,7 +11,7 @@ buildscript {
 }
 
 ext {
-        scarabeiVersion = "1.5.1"
+        //scarabeiVersion = "1.5.1"
         gdxVersion = "1.9.6"
         ranaVersion = "1.1.2"
         box2DVersion = "1.0.0"

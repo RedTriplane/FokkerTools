@@ -16,5 +16,12 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-engine"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-font"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-io"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-activity-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-box2d-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-engine-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-physics-io"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-gravity-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-render-api"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
