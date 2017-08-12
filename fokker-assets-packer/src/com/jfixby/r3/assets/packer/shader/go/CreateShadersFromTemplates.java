@@ -3,7 +3,7 @@ package com.jfixby.r3.assets.packer.shader.go;
 
 import java.io.IOException;
 
-import com.jfixby.r3.fokker.FOKKER_SYSTEM_ASSETS;
+import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
 import com.jfixby.r3.fokker.assets.api.shader.io.FOKKER_SHADER_PARAMS;
 import com.jfixby.r3.fokker.assets.api.shader.io.R3_SHADER_SETTINGS;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShaderInfo;

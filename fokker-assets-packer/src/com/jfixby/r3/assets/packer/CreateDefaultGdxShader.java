@@ -4,7 +4,7 @@ package com.jfixby.r3.assets.packer;
 import java.io.IOException;
 
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
-import com.jfixby.r3.fokker.FOKKER_SYSTEM_ASSETS;
+import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
 import com.jfixby.r3.fokker.assets.api.shader.io.R3_SHADER_SETTINGS;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShaderInfo;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShadersContainer;

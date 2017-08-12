@@ -3,7 +3,7 @@ package com.jfixby.r3.assets.packer.tinto;
 
 import java.io.IOException;
 
-import com.jfixby.r3.fokker.FOKKER_SYSTEM_ASSETS;
+import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
 import com.jfixby.r3.rana.api.pkg.io.PackageDescriptor;
 import com.jfixby.rana.api.pkg.StandardPackageFormats;
 import com.jfixby.scarabei.adopted.gdx.json.GdxJson;
