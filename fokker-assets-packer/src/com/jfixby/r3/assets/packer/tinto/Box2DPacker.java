@@ -3,14 +3,14 @@ package com.jfixby.r3.assets.packer.tinto;
 
 import java.io.IOException;
 
-import com.jfixby.scarabei.api.assets.ID;
-import com.jfixby.scarabei.api.assets.Names;
 import com.jfixby.scarabei.api.collections.Collection;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.FileFilter;
 import com.jfixby.scarabei.api.file.FilesList;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.log.L;
+import com.jfixby.scarabei.api.names.ID;
+import com.jfixby.scarabei.api.names.Names;
 import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 import com.jfixby.tool.box2d.packer.Box2DShapesPacker;
 import com.jfixby.tool.box2d.packer.Box2DShapesPackerSettings;

@@ -9,8 +9,6 @@ import com.jfixby.r3.fokker.assets.api.shader.io.ShadersContainer;
 import com.jfixby.r3.fokker.shader.api.FokkerShaderPackageReader;
 import com.jfixby.r3.rana.api.pkg.PackerSpecs;
 import com.jfixby.r3.rana.red.pkg.bank.PackageUtils;
-import com.jfixby.scarabei.api.assets.ID;
-import com.jfixby.scarabei.api.assets.Names;
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.List;
 import com.jfixby.scarabei.api.file.File;
@@ -18,6 +16,8 @@ import com.jfixby.scarabei.api.file.FilesList;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.io.IO;
 import com.jfixby.scarabei.api.log.L;
+import com.jfixby.scarabei.api.names.ID;
+import com.jfixby.scarabei.api.names.Names;
 
 public class ShadersPacker {
 

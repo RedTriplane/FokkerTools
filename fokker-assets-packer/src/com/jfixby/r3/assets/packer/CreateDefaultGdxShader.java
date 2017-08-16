@@ -8,7 +8,6 @@ import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
 import com.jfixby.r3.fokker.assets.api.shader.io.R3_SHADER_SETTINGS;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShaderInfo;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShadersContainer;
-import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.io.IO;
@@ -16,6 +15,7 @@ import com.jfixby.scarabei.api.java.ByteArray;
 import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.json.JsonString;
 import com.jfixby.scarabei.api.log.L;
+import com.jfixby.scarabei.api.names.ID;
 import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.red.json.GoogleJson;
 
