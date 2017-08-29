@@ -78,10 +78,8 @@ public class RepackCamTest {// -Xms512m -Xmx4g
 		final FilesList psd_files = input_folder.listDirectChildren().filter(filter);
 		if (psd_files.size() == 0) {
 			L.d("No files found.");
-			input_folder.listDirectChildren().print("content");
 			Sys.exit();
 		}
-		psd_files.print("processing");
 // Sys.exit();
 		final File output_folder = LocalFileSystem.newFile(TintoAssetsConfig.TINTO_REMOTE_ASSETS_HOME).child("tank-0");
 		output_folder.makeFolder();
@@ -151,8 +149,6 @@ public class RepackCamTest {// -Xms512m -Xmx4g
 				Sys.exit();
 
 			}
-
-			compressedPNG.print("compressed files");
 
 			L.d(" done", package_name_string);
 			packageTimer.printTime("PERFORMANCE-TEST: " + package_name_string);

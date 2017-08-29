@@ -31,7 +31,6 @@ public class Box2DPacker {
 			}
 		};
 		final FilesList input_files = input_folder.listDirectChildren().filter(filter);
-		input_files.print("processing");
 
 		final File output_folder = LocalFileSystem.newFile(TintoAssetsConfig.TINTO_REMOTE_ASSETS_HOME).child("bank-florida");
 		output_folder.makeFolder();

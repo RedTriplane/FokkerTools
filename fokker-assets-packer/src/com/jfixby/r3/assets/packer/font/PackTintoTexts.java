@@ -4,12 +4,8 @@ package com.jfixby.r3.assets.packer.font;
 import java.io.IOException;
 
 import com.jfixby.r3.assets.packer.tinto.TintoAssetsConfig;
-import com.jfixby.r3.ext.api.text.TextLocalization;
-import com.jfixby.r3.ext.api.text.TextPackage;
-import com.jfixby.r3.ext.api.text.TextPackageEntry;
 import com.jfixby.r3.rana.api.pkg.io.PackageDescriptor;
 import com.jfixby.r3.rana.red.pkg.bank.PackageUtils;
-import com.jfixby.rana.api.pkg.StandardPackageFormats;
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.List;
 import com.jfixby.scarabei.api.collections.Set;
@@ -20,7 +16,6 @@ import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.names.ID;
 import com.jfixby.scarabei.api.names.Names;
 import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
-import com.jfixby.scarabei.red.json.GoogleJson;
 
 public class PackTintoTexts {
 
@@ -30,7 +25,6 @@ public class PackTintoTexts {
 
 	public static final void main (final String[] arg) throws IOException {
 		ScarabeiDesktop.deploy();
-		Json.installComponent(new GoogleJson());
 
 		final FilesList langFiles = LocalFileSystem.ApplicationHome().child("input").child("ru").listDirectChildren();
 

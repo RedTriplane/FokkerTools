@@ -6,7 +6,6 @@ import java.io.IOException;
 import com.github.wrebecca.bleed.RebeccaTextureBleeder;
 import com.jfixby.psd.unpacker.api.PSDUnpacker;
 import com.jfixby.psd.unpacker.core.RedPSDUnpacker;
-import com.jfixby.scarabei.adopted.gdx.json.GdxJson;
 import com.jfixby.scarabei.api.collections.Collection;
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.List;
@@ -18,7 +17,6 @@ import com.jfixby.scarabei.api.file.FileFilter;
 import com.jfixby.scarabei.api.file.FilesList;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.java.gc.GCFisher;
-import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.api.names.ID;
 import com.jfixby.scarabei.api.names.Names;
@@ -49,7 +47,6 @@ public class RepackPSDScene {// -Xms512m -Xmx4g
 // PNGQuant.installComponent(new PNGQuantJavaWrapper("D:\\[DEV]\\[GIT]\\pngquant\\PNGQuant\\pngquant.exe"));
 
 		PSDUnpacker.installComponent(new RedPSDUnpacker());
-		Json.installComponent(new GdxJson());
 		TexturePacker.installComponent(new GdxTexturePacker());
 		TextureSlicer.installComponent(new RedTextureSlicer());
 // TextureBleed.installComponent(new MaskTextureBleeder());

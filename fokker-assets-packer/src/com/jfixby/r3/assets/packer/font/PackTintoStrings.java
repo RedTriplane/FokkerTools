@@ -9,7 +9,6 @@ import com.jfixby.r3.ext.api.string.StringsPackage;
 import com.jfixby.r3.rana.api.pkg.io.PackageDescriptor;
 import com.jfixby.r3.rana.red.pkg.bank.PackageUtils;
 import com.jfixby.rana.api.pkg.StandardPackageFormats;
-import com.jfixby.scarabei.adopted.gdx.json.GdxJson;
 import com.jfixby.scarabei.api.collections.Collection;
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.List;
@@ -34,7 +33,6 @@ public class PackTintoStrings {
 
 	public static final void main (final String[] arg) throws IOException {
 		ScarabeiDesktop.deploy();
-		Json.installComponent(new GdxJson());
 
 		final FilesList langFiles = LocalFileSystem.ApplicationHome().child("input").child("ru").listDirectChildren();
 

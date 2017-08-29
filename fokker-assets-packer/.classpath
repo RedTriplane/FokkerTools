@@ -23,5 +23,18 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-physics-io"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-gravity-api"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-render-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-aws-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-aws-core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-aws-desktop"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/psd-to-scene2d"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/psd-unpacker-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/psd-unpacker-red"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/texture-bleed-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/texture-bleed-red"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/texture-packer-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/texture-packer-gdx"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/texture-slicer-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/texture-slicer-io"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/texture-slicer-red"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

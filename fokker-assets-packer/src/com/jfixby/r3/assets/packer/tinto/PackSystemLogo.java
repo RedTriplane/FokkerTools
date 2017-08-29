@@ -5,8 +5,6 @@ import java.io.IOException;
 
 import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
 import com.jfixby.r3.rana.api.pkg.io.PackageDescriptor;
-import com.jfixby.rana.api.pkg.StandardPackageFormats;
-import com.jfixby.scarabei.adopted.gdx.json.GdxJson;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.io.IO;
@@ -21,7 +19,6 @@ public class PackSystemLogo {
 	public static void main (final String[] args) throws IOException {
 
 		ScarabeiDesktop.deploy();
-		Json.installComponent(new GdxJson());
 
 		packSystemAsset(FOKKER_SYSTEM_ASSETS.RASTER_IS_MISING);
 		packSystemAsset(FOKKER_SYSTEM_ASSETS.BLACK);

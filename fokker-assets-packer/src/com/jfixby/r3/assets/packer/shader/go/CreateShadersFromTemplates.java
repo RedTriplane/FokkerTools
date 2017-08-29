@@ -35,8 +35,8 @@ public class CreateShadersFromTemplates {
 		final File output = shaders.child("prepared");
 
 		final List<ID> input = Collections.newList();
-		input.add(Names.newID(FOKKER_SYSTEM_ASSETS.SHADERS));
-		input.add(Names.newID(FOKKER_SYSTEM_ASSETS.SHADER_GDX_DEFAULT).parent());
+		input.add((FOKKER_SYSTEM_ASSETS.SHADERS));
+		input.add((FOKKER_SYSTEM_ASSETS.SHADER_GDX_DEFAULT).parent());
 
 // output.clearFolder();
 		for (final ID i : input) {
