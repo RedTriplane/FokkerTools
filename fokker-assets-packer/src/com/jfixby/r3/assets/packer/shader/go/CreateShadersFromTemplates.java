@@ -18,7 +18,6 @@ import com.jfixby.scarabei.api.java.ByteArray;
 import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.api.names.ID;
-import com.jfixby.scarabei.api.names.Names;
 import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.red.json.GoogleJson;
 
@@ -77,7 +76,7 @@ public class CreateShadersFromTemplates {
 		final String vert_template_string = input_vert_file.readToString();
 
 		final ShaderInfo info = new ShaderInfo();
-		final ID shader_id = Names.newID(FOKKER_SYSTEM_ASSETS.SHADERS).child(short_name);
+		final ID shader_id = (FOKKER_SYSTEM_ASSETS.SHADERS).child(short_name);
 		final File content = output.child(short_name);
 		content.makeFolder();
 		content.clearFolder();

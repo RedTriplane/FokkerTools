@@ -24,7 +24,7 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-gravity-api"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-render-api"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-aws-api"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-aws-core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-aws-red"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/scarabei-aws-desktop"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/psd-to-scene2d"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/psd-unpacker-api"/>

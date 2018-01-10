@@ -48,7 +48,7 @@ public class SystemFontPacker {
 
 		final File root_file = fontFolder.child(fontFileName);
 		final List<ID> packed = Collections.newList();
-		final ID id_i = Names.newID(fontFileName);
+		final ID id_i = Names.newID(fontFolder.getName());
 		packed.add(id_i);
 
 		specs.packedAssets.addAll(packed);

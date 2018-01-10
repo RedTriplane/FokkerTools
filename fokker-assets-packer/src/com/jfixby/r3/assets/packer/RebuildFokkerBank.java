@@ -24,13 +24,11 @@ import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.api.names.ID;
 import com.jfixby.scarabei.api.names.Names;
 import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
-import com.jfixby.scarabei.red.json.GoogleJson;
 
 public class RebuildFokkerBank {
 
 	public static void main (final String[] args) throws IOException {
 		ScarabeiDesktop.deploy();
-		Json.installComponent(new GoogleJson());
 
 		final File outputFolder = LocalFileSystem.newFile(FokkerAssetsConfig.FOKKER_LOCAL_ASSETS_HOME);
 
@@ -57,7 +55,7 @@ public class RebuildFokkerBank {
 
 		final String fontName = FOKKER_SYSTEM_ASSETS.GENERIC_FONT.toString();
 		final File fontFolder = LocalFileSystem.ApplicationHome().child("fonts").child(fontName);
-		final List<String> steps = Names.newID(FOKKER_SYSTEM_ASSETS.GENERIC_FONT).steps();
+		final List<String> steps = (FOKKER_SYSTEM_ASSETS.GENERIC_FONT).steps();
 		steps.reverse();
 		final String fontFileName = Names.newID(steps).toString();
 		SystemFontPacker.packSystemFont(tank, fontFolder, fontFileName);
