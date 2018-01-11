@@ -23,8 +23,6 @@ public class PackSystemRaster {
 		final File tank = outputBankFolder.child(cfg.targetTank);
 // tank.listDirectChildren().print("tank");
 
-		SystemRasterPacker.pack(tank);
-
 	}
 
 }

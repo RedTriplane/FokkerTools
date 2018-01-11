@@ -1,5 +1,5 @@
 
-package com.jfixby.r3.assets.packer;
+package com.jfixby.r3.assets.packer.go;
 
 import java.io.IOException;
 
@@ -17,6 +17,7 @@ import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.List;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.FilesList;
+import com.jfixby.scarabei.api.file.LocalFile;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.io.IO;
 import com.jfixby.scarabei.api.json.Json;
@@ -25,38 +26,55 @@ import com.jfixby.scarabei.api.names.ID;
 import com.jfixby.scarabei.api.names.Names;
 import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
-public class RebuildFokkerBank {
-
-	public static void main (final String[] args) throws IOException {
+public class SystemAssetsBankBuilder {
+	public static final void main (final String[] args) throws IOException {
 		ScarabeiDesktop.deploy();
 
-		final File outputFolder = LocalFileSystem.newFile(FokkerAssetsConfig.FOKKER_LOCAL_ASSETS_HOME);
+		final LocalFile outputFolder = LocalFileSystem.newFile("D:\\[DEV]\\[GIT-3]\\Jet\\jet-desktop\\assets");
+		deployR3Bank(outputFolder);
+	}
 
-		final BankHeaderInfo bankHeader = new BankHeaderInfo();
-		bankHeader.bank_name = FOKKER_SYSTEM_ASSETS.LOCAL_BANK_NAME.toString();
+	public static void deployR3Bank (final File outputFolder) throws IOException {
+		final String bankname = FOKKER_SYSTEM_ASSETS.LOCAL_BANK_NAME.toString();
+		final File localBankFolder = outputFolder.child(bankname);
+		localBankFolder.makeFolder();
+		localBankFolder.clearFolder();
 
-		final File bankFolder = outputFolder.child(bankHeader.bank_name);
-		bankFolder.clearFolder();
-		final File tankFolder = bankFolder.child("tank-0");
+		writeBankHeader(outputFolder, bankname);
 
-		tankFolder.makeFolder();
+		final File tankFolder = localBankFolder.child("tank-0");
 
-		final File bankHeaderFile = bankFolder.child(BankHeaderInfo.FILE_NAME);
-		L.d("writing", bankHeaderFile);
-		bankHeaderFile.writeString(Json.serializeToString(bankHeader).toString());
+		final File shadersFolder = LocalFileSystem.ApplicationHome().child("shaders").child("prepared");
+		final File rasterFolder = LocalFileSystem.ApplicationHome().child("raster");
+		final String fontName = FOKKER_SYSTEM_ASSETS.GENERIC_FONT.toString();
+		final File fontsFolder = LocalFileSystem.ApplicationHome().child("fonts").child(fontName);
 
-		final File raster = LocalFileSystem.ApplicationHome().child("raster");
-
-		packShaders(tankFolder);
-		packRaster(raster, tankFolder);
-		packDefaultFont(tankFolder);
+		packShaders(shadersFolder, tankFolder);
+		packRaster(rasterFolder, tankFolder);
+		packDefaultFont(fontsFolder, tankFolder);
 
 	}
 
-	private static void packDefaultFont (final File tank) throws IOException {
+	public static File writeBankHeader (final File localAssets, final String bankname) throws IOException {
+
+		final File localBankFolder = localAssets.child(bankname);
+		localBankFolder.makeFolder();
+
+		final File bankHeaderFile = localBankFolder.child(BankHeaderInfo.FILE_NAME);
+		L.d("writing", bankHeaderFile);
+
+		final BankHeaderInfo bankHeader = new BankHeaderInfo();
+		bankHeader.bank_name = bankname;
+
+		bankHeaderFile.writeString(Json.serializeToString(bankHeader).toString());
+
+		return localBankFolder;
+	}
+
+	private static void packDefaultFont (final File fontFolder, final File tank) throws IOException {
 
 		final String fontName = FOKKER_SYSTEM_ASSETS.GENERIC_FONT.toString();
-		final File fontFolder = LocalFileSystem.ApplicationHome().child("fonts").child(fontName);
+// final File fontFolder = LocalFileSystem.ApplicationHome().child("fonts").child(fontName);
 		final List<String> steps = (FOKKER_SYSTEM_ASSETS.GENERIC_FONT).steps();
 		steps.reverse();
 		final String fontFileName = Names.newID(steps).toString();
@@ -64,12 +82,12 @@ public class RebuildFokkerBank {
 
 	}
 
-	private static void packRaster (final File raster, final File tank) throws IOException {
-		SystemRasterPacker.pack(raster, tank);
+	private static void packRaster (final File systemRaster, final File tank) throws IOException {
+		SystemRasterPacker.pack(systemRaster, tank);
 	}
 
-	private static void packShaders (final File tank) throws IOException {
-		final File shaders = LocalFileSystem.ApplicationHome().child("shaders").child("prepared");
+	private static void packShaders (final File shaders, final File tank) throws IOException {
+// final File shaders = LocalFileSystem.ApplicationHome().child("shaders").child("prepared");
 // shaders.listAllChildren().print("shaders");
 
 		final FilesList folders_list = shaders.listDirectChildren();

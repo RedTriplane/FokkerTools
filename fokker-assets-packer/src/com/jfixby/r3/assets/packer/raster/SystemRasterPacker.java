@@ -10,16 +10,14 @@ import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.List;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.FilesList;
-import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.api.names.ID;
 import com.jfixby.scarabei.api.names.Names;
 
 public class SystemRasterPacker {
-	public static void pack (final File tank) throws IOException {
+	public static void pack (final File rasterFolder, final File tank) throws IOException {
 
-		final File shaders = LocalFileSystem.ApplicationHome().child("raster");
-		final FilesList files_list = shaders.listDirectChildren();
+		final FilesList files_list = rasterFolder.listDirectChildren();
 		for (int i = 0; i < files_list.size(); i++) {
 			final File file = files_list.getElementAt(i);
 			try {
