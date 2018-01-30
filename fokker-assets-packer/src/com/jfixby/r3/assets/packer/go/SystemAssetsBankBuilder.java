@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import com.jfixby.r3.assets.packer.font.SystemFontPacker;
 import com.jfixby.r3.assets.packer.raster.SystemRasterPacker;
+import com.jfixby.r3.fokker.adaptor.cfg.FokkerStarterConfig;
 import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
 import com.jfixby.r3.fokker.assets.api.shader.io.R3_SHADER_SETTINGS;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShaderInfo;
@@ -25,6 +26,7 @@ import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.api.names.ID;
 import com.jfixby.scarabei.api.names.Names;
 import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
+import com.jfixby.scarabei.red.filesystem.virtual.InMemoryFileSystem;
 
 public class SystemAssetsBankBuilder {
 	public static final void main (final String[] args) throws IOException {
@@ -136,6 +138,45 @@ public class SystemAssetsBankBuilder {
 
 	private static ShadersContainer readInfo (final File root_file) throws IOException {
 		return IO.deserialize(ShadersContainer.class, root_file.readBytes());
+	}
+
+	public static void createStarterConfig (final File tankFolder, final String fokkerStarterAssetId,
+		final int fokkerStarterConfigWidth, final int fokkerStarterConfigHeight, final String title) throws IOException {
+
+		final File pkg = tankFolder.child(fokkerStarterAssetId);
+		pkg.makeFolder();
+		final String id_string = pkg.getName();
+
+		final FokkerStarterConfig fokkerConfig = new FokkerStarterConfig();
+
+		fokkerConfig.params.put(FokkerStarterConfig.useGL30, true + "");
+		fokkerConfig.params.put(FokkerStarterConfig.width, fokkerStarterConfigWidth + "");
+		fokkerConfig.params.put(FokkerStarterConfig.height, fokkerStarterConfigHeight + "");
+		fokkerConfig.params.put(FokkerStarterConfig.TITLE, title);
+
+		final PackerSpecs specs = new PackerSpecs();
+
+		final InMemoryFileSystem tmp = new InMemoryFileSystem();
+
+		specs.packageFolder = (pkg);
+		specs.rootFileName = FokkerStarterConfig.FILE_NAME;
+
+		final File tmpFolder = tmp.ROOT();
+		final File tmpFile = tmpFolder.child(specs.rootFileName);
+		tmpFile.writeString(Json.serializeToString(fokkerConfig).toString());
+
+		final FilesList files = tmpFolder.listDirectChildren();
+		specs.packedFiles.addAll(files);
+
+		final List<ID> packed = Collections.newList();
+		final ID id_i = Names.newID(id_string);
+		packed.add(id_i);
+		specs.packedAssets.addAll(packed);
+
+		specs.packageFormat = (FokkerStarterConfig.PACKAGE_FORMAT);
+		specs.version = ("1.0");
+		L.d("packing", pkg);
+		PackageUtils.pack(specs);
 	}
 
 }
