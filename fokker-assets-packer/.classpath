@@ -14,7 +14,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-rana-api"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-rana-red"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-engine"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-font"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-io"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-activity-api"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/r3-box2d-api"/>
@@ -36,5 +35,11 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/texture-slicer-api"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/texture-slicer-io"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/texture-slicer-red"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-font-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-font-red"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-raster-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-raster-io"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-render-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/r3-fokker-shader-api"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
